@@ -39,10 +39,18 @@ const formSchema = z.object({
     company: z.string().min(1, "La empresa es requerida"),
     position: z.string().min(1, "El cargo es requerido"),
     startDate: z.string().min(1, "La fecha de inicio es requerida"),
-    endDate: z.string().min(1, "La fecha de fin es requerida").optional(),
-    isCurrent: z.boolean().optional(),
+    endDate: z.string().optional(),
+    isCurrent: z.boolean().default(false),
     description: z.string().min(1, "La descripción es requerida"),
     location: z.string().optional(),
+  }).refine((data) => {
+    if (!data.isCurrent && !data.endDate) {
+      return false;
+    }
+    return true;
+  }, {
+    message: "La fecha de fin es requerida si no es el trabajo actual",
+    path: ["endDate"],
   })).min(1, "Al menos una experiencia laboral es requerida"),
   skills: z.array(z.object({
     category: z.string().min(1, "La categoría es requerida"),
@@ -141,6 +149,19 @@ export function CVForm({ onSubmit, initialData }: { onSubmit: (data: CVData) => 
                   <FormLabel>Nombre Completo</FormLabel>
                   <FormControl>
                     <Input placeholder="John Doe" {...field} />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <FormField
+              control={form.control}
+              name="personalInfo.title"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Título Profesional</FormLabel>
+                  <FormControl>
+                    <Input placeholder="Desarrollador Full Stack" {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -258,6 +279,7 @@ export function CVForm({ onSubmit, initialData }: { onSubmit: (data: CVData) => 
                     startDate: "",
                     endDate: "",
                     description: "",
+                    isCurrent: false,
                     location: "",
                   },
                 ]);
@@ -342,7 +364,9 @@ export function CVForm({ onSubmit, initialData }: { onSubmit: (data: CVData) => 
                       <FormControl>
                         <Input 
                           type="month" 
-                          {...field}
+                          disabled={form.watch(`experience.${index}.isCurrent`) || false}
+                          value={field.value || ""}
+                          onChange={field.onChange}
                         />
                       </FormControl>
                       <FormMessage />
@@ -375,6 +399,27 @@ export function CVForm({ onSubmit, initialData }: { onSubmit: (data: CVData) => 
                         <Input placeholder="Ciudad, País" {...field} />
                       </FormControl>
                       <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                <FormField
+                  control={form.control}
+                  name={`experience.${index}.isCurrent`}
+                  render={({ field }) => (
+                    <FormItem className="flex items-center space-x-2">
+                      <FormControl>
+                        <input
+                          type="checkbox"
+                          checked={field.value || false}
+                          onChange={(e) => {
+                            field.onChange(e.target.checked);
+                            if (e.target.checked) {
+                              form.setValue(`experience.${index}.endDate`, "", { shouldValidate: true });
+                            }
+                          }}
+                        />
+                      </FormControl>
+                      <FormLabel>Trabajo Actual</FormLabel>
                     </FormItem>
                   )}
                 />
@@ -817,8 +862,12 @@ export function CVForm({ onSubmit, initialData }: { onSubmit: (data: CVData) => 
         </div>
 
         <div className="space-y-4">
-          <Button type="submit" className="w-full">
-            Guardar Datos
+          <Button 
+            type="submit" 
+            className="w-full"
+            disabled={!form.formState.isValid}
+          >
+            Guardar Datos 
           </Button>
         </div>
       </form>
