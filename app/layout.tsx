@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { Github } from "lucide-react";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -29,6 +30,19 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
+        <footer className="py-6 text-center border-t">
+          <div className="flex items-center justify-center gap-2 text-sm text-gray-600">
+            <span>By: Thiago Lopez</span>
+            <a
+              href="https://github.com/10075016-22/cv-harvard-model"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-1 hover:text-gray-900 transition-colors"
+            >
+               - Like repository <Github className="w-4 h-4" />
+            </a>
+          </div>
+        </footer>
       </body>
     </html>
   );

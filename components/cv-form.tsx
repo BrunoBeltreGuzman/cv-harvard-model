@@ -865,9 +865,8 @@ export function CVForm({ onSubmit, initialData }: { onSubmit: (data: CVData) => 
           <Button 
             type="submit" 
             className="w-full"
-            disabled={!form.formState.isValid}
           >
-            Guardar Datos 
+            Guardar
           </Button>
         </div>
       </form>
