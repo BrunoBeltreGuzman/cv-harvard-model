@@ -11,7 +11,7 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   name: {
-    fontSize: 24,
+    fontSize: 18,
     fontFamily: 'Times-Bold',
     marginBottom: 10,
     textAlign: 'center',
