@@ -5,6 +5,8 @@ import { CVForm } from "@/components/cv-form"
 import { CVPreview } from "@/components/cv-preview"
 import type { CVData } from "@/types/cv"
 import { Button } from "@/components/ui/button"
+import { pdf } from '@react-pdf/renderer'
+import { CVDocument } from "@/components/cv-document"
 
 export default function Page() {
   const [cvData, setCvData] = useState<CVData | null>(null)
@@ -15,8 +17,11 @@ export default function Page() {
     setView("preview")
   }
 
-  const handlePrint = () => {
-    window.print()
+  const handleExportPDF = async () => {
+    if (!cvData) return;
+    const blob = await pdf(<CVDocument data={cvData} />).toBlob()
+    const url = URL.createObjectURL(blob)
+    window.open(url, '_blank')
   }
 
   return (
@@ -32,8 +37,8 @@ export default function Page() {
               <Button variant="outline" onClick={() => setView("form")}>
                 Editar
               </Button>
-              <Button onClick={handlePrint}>
-                Imprimir / Guardar PDF
+              <Button onClick={handleExportPDF}>
+                Exportar PDF
               </Button>
             </div>
             <CVPreview data={cvData} />
