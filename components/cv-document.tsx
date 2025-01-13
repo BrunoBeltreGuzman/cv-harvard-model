@@ -193,8 +193,16 @@ const styles = StyleSheet.create({
 
 export function CVDocument({ data }: { data: CVData }) {
   const formatDate = (dateString: string) => {
-    const date = new Date(dateString);
-    return date.toLocaleDateString('es-ES', { year: 'numeric', month: 'long' });
+    if (!dateString) return "";
+    // Crear la fecha usando UTC para evitar problemas de zona horaria
+    const [year, month] = dateString.split('-');
+    const date = new Date(Date.UTC(parseInt(year), parseInt(month) - 1, 1));
+    
+    return date.toLocaleDateString('es-ES', { 
+      year: 'numeric', 
+      month: 'long',
+      timeZone: 'UTC' // Forzar UTC
+    }).replace(/^\w/, (c) => c.toUpperCase());
   };
 
   return (
