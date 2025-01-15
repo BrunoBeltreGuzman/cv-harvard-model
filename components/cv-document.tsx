@@ -11,7 +11,7 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   name: {
-    fontSize: 18,
+    fontSize: 15,
     fontFamily: 'Times-Bold',
     marginBottom: 10,
     textAlign: 'center',
@@ -43,16 +43,21 @@ const styles = StyleSheet.create({
   },
   itemTitle: {
     fontFamily: 'Times-Bold',
+    fontSize: 10,
   },
   itemSubtitle: {
-    fontFamily: 'Times-Italic',
+    fontFamily: 'Times-Roman',
+    fontSize: 10,
+    color: '#444',
   },
   itemDates: {
     color: '#666',
   },
   description: {
     marginTop: 3,
-    lineHeight: 1.5,
+    lineHeight: 1.4,
+    textAlign: 'justify',
+    fontSize: 10,
   },
   skillGroup: {
     marginBottom: 8,
@@ -65,6 +70,7 @@ const styles = StyleSheet.create({
   skillItems: {
     fontSize: 10,
     color: '#444',
+    lineHeight: 1.2,
   },
   languageContainer: {
     flexDirection: 'row',
@@ -80,11 +86,16 @@ const styles = StyleSheet.create({
   complementaryContainer: {
     marginBottom: 8,
     flexDirection: 'row',
-    justifyContent: 'space-between',
+    gap: 20,
+  },
+  dateLocation: {
+    width: '30%',
+    paddingRight: 15,
   },
   complementaryContent: {
     flex: 1,
-    marginLeft: 10,
+    flexDirection: 'column',
+    gap: 2,
   },
   complementaryHeader: {
     flexDirection: 'row',
@@ -96,7 +107,8 @@ const styles = StyleSheet.create({
   },
   complementaryType: {
     fontFamily: 'Times-Italic',
-    color: '#444',
+    fontSize: 10,
+    color: '#666',
   },
   linkText: {
     fontSize: 10,
@@ -105,16 +117,10 @@ const styles = StyleSheet.create({
   },
   experienceContainer: {
     flexDirection: 'row',
-    justifyContent: 'space-between',
-    marginBottom: 10,
-  },
-  dateLocation: {
-    flexDirection: 'column',
-    justifyContent: 'space-between',
-    marginRight: 10,
+    marginBottom: 15,
   },
   dates: {
-    fontSize: 10,
+    fontSize: 9,
     color: '#666',
   },
   location: {
@@ -127,37 +133,45 @@ const styles = StyleSheet.create({
   jobTitle: {
     fontSize: 10,
     fontFamily: 'Times-Bold',
-    marginBottom: 5,
+    marginBottom: 4,
   },
   bulletPoints: {
-    flexDirection: 'row',
-    flexWrap: 'wrap',
+    marginTop: 2,
   },
   bulletPoint: {
     flexDirection: 'row',
-    alignItems: 'center',
-    marginRight: 5,
+    marginBottom: 2,
   },
   bullet: {
+    width: 15,
     fontSize: 10,
-    fontFamily: 'Times-Bold',
   },
   bulletText: {
+    flex: 1,
     fontSize: 10,
-    color: '#444',
+    lineHeight: 1.2,
   },
   educationContainer: {
     flexDirection: 'row',
-    justifyContent: 'space-between',
-    marginBottom: 10,
+    marginBottom: 15,
+  },
+  educationContent: {
+    flex: 1,
   },
   institution: {
     fontSize: 10,
     fontFamily: 'Times-Bold',
+    marginBottom: 2,
   },
   degree: {
     fontSize: 10,
     color: '#444',
+    marginBottom: 2,
+  },
+  educationDescription: {
+    fontSize: 10,
+    color: '#666',
+    lineHeight: 1.2,
   },
   skillsGrid: {
     flexDirection: 'row',
@@ -170,7 +184,8 @@ const styles = StyleSheet.create({
   skillName: {
     fontSize: 10,
     fontFamily: 'Times-Bold',
-    marginBottom: 5,
+    marginBottom: 3,
+    lineHeight: 1.2,
   },
   skillLevel: {
     fontSize: 10,
@@ -257,7 +272,9 @@ export function CVDocument({ data }: { data: CVData }) {
                   {exp.description.split('\n').map((point, i) => (
                     <View key={i} style={styles.bulletPoint}>
                       <Text style={styles.bullet}>•</Text>
-                      <Text style={styles.bulletText}>{point.trim()}</Text>
+                      <Text style={styles.bulletText}>
+                        {point.trim().replace(/^• /, '').replace(/^• • /, '•')}
+                      </Text>
                     </View>
                   ))}
                 </View>
@@ -277,8 +294,13 @@ export function CVDocument({ data }: { data: CVData }) {
                 </Text>
                 <Text style={styles.location}>{edu.location || ""}</Text>
               </View>
-              <Text style={styles.institution}>{edu.institution}</Text>
-              <Text style={styles.degree}>{edu.degree}</Text>
+              <View style={styles.educationContent}>
+                <Text style={styles.institution}>{edu.institution}</Text>
+                <Text style={styles.degree}>{edu.degree}</Text>
+                {edu.description && (
+                  <Text style={styles.educationDescription}>{edu.description}</Text>
+                )}
+              </View>
             </View>
           ))}
         </View>

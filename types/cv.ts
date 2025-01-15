@@ -17,6 +17,7 @@ export const cvSchema = z.object({
     startDate: z.string().min(1, "La fecha de inicio es requerida"),
     endDate: z.string().min(1, "La fecha de fin es requerida"),
     location: z.string().optional(),
+    description: z.string().optional(),
   })).min(1, "Al menos una entrada de educación es requerida"),
   experience: z.array(z.object({
     company: z.string().min(1, "La empresa es requerida"),
