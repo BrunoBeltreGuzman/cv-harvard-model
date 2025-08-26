@@ -238,6 +238,14 @@ export function CVDocument({ data }: { data: CVData }) {
             <Link src={data.personalInfo.linkedin}>
               <Text style={styles.linkText}>LinkedIn</Text>
             </Link>
+            {data.personalInfo.github && (
+              <>
+                <Text style={styles.linkSeparator}> • </Text>
+                <Link src={data.personalInfo.github}>
+                  <Text style={styles.linkText}>Github</Text>
+                </Link>
+              </>
+            )}
             {data.personalInfo.website && (
               <>
                 <Text style={styles.linkSeparator}> • </Text>

@@ -1,4 +1,4 @@
-import { z } from "zod"
+import { z } from "zod";
 
 export const cvSchema = z.object({
   personalInfo: z.object({
@@ -7,44 +7,68 @@ export const cvSchema = z.object({
     email: z.string().email("Email inválido"),
     phone: z.string().min(1, "El teléfono es requerido"),
     location: z.string().optional(),
-    linkedin: z.string().url("URL de LinkedIn inválida").optional().or(z.literal("")),
+    linkedin: z
+      .string()
+      .url("URL de LinkedIn inválida")
+      .optional()
+      .or(z.literal("")),
+    github: z
+      .string()
+      .url("URL de GitHub inválida")
+      .optional()
+      .or(z.literal("")),
     website: z.string().url("URL inválida").optional().or(z.literal("")),
   }),
   profile: z.string().min(1, "El perfil profesional es requerido"),
-  education: z.array(z.object({
-    institution: z.string().min(1, "La institución es requerida"),
-    degree: z.string().min(1, "El título es requerido"),
-    startDate: z.string().min(1, "La fecha de inicio es requerida"),
-    endDate: z.string().min(1, "La fecha de fin es requerida"),
-    location: z.string().optional(),
-    description: z.string().optional(),
-  })).min(1, "Al menos una entrada de educación es requerida"),
-  experience: z.array(z.object({
-    company: z.string().min(1, "La empresa es requerida"),
-    position: z.string().min(1, "El cargo es requerido"),
-    startDate: z.string().min(1, "La fecha de inicio es requerida"),
-    endDate: z.string().optional(),
-    isCurrent: z.boolean().default(false),
-    description: z.string().min(1, "La descripción es requerida"),
-    location: z.string().optional(),
-  })).min(1, "Al menos una experiencia laboral es requerida"),
-  skills: z.array(z.object({
-    category: z.string().min(1, "La categoría es requerida"),
-    items: z.array(z.string().min(1, "La habilidad es requerida")).min(1, "Al menos una habilidad es requerida"),
-  })),
-  languages: z.array(z.object({
-    language: z.string().min(1, "El idioma es requerido"),
-    level: z.string().min(1, "El nivel es requerido"),
-  })),
-  complementary: z.array(z.object({
-    title: z.string().min(1, "El título es requerido"),
-    institution: z.string().min(1, "La institución es requerida"),
-    startDate: z.string().min(1, "La fecha de inicio es requerida"),
-    endDate: z.string().optional(),
-    isCurrent: z.boolean().default(false),
-    type: z.string().min(1, "El tipo es requerido"),
-  })),
-})
+  education: z
+    .array(
+      z.object({
+        institution: z.string().min(1, "La institución es requerida"),
+        degree: z.string().min(1, "El título es requerido"),
+        startDate: z.string().min(1, "La fecha de inicio es requerida"),
+        endDate: z.string().min(1, "La fecha de fin es requerida"),
+        location: z.string().optional(),
+        description: z.string().optional(),
+      })
+    )
+    .min(1, "Al menos una entrada de educación es requerida"),
+  experience: z
+    .array(
+      z.object({
+        company: z.string().min(1, "La empresa es requerida"),
+        position: z.string().min(1, "El cargo es requerido"),
+        startDate: z.string().min(1, "La fecha de inicio es requerida"),
+        endDate: z.string().optional(),
+        isCurrent: z.boolean().default(false),
+        description: z.string().min(1, "La descripción es requerida"),
+        location: z.string().optional(),
+      })
+    )
+    .min(1, "Al menos una experiencia laboral es requerida"),
+  skills: z.array(
+    z.object({
+      category: z.string().min(1, "La categoría es requerida"),
+      items: z
+        .array(z.string().min(1, "La habilidad es requerida"))
+        .min(1, "Al menos una habilidad es requerida"),
+    })
+  ),
+  languages: z.array(
+    z.object({
+      language: z.string().min(1, "El idioma es requerido"),
+      level: z.string().min(1, "El nivel es requerido"),
+    })
+  ),
+  complementary: z.array(
+    z.object({
+      title: z.string().min(1, "El título es requerido"),
+      institution: z.string().min(1, "La institución es requerida"),
+      startDate: z.string().min(1, "La fecha de inicio es requerida"),
+      endDate: z.string().optional(),
+      isCurrent: z.boolean().default(false),
+      type: z.string().min(1, "El tipo es requerido"),
+    })
+  ),
+});
 
-export type CVData = z.infer<typeof cvSchema>
-
+export type CVData = z.infer<typeof cvSchema>;

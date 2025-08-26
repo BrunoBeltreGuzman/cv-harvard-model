@@ -33,6 +33,12 @@ export function CVPreview({ data }: { data: CVData }) {
             <h2 className="text-lg font-bold border-b-2 border-gray-300 mb-4">LINKS</h2>
             <p className="text-gray-600">
               <a href={data.personalInfo.linkedin} target="_blank" className="text-blue-600 hover:underline">LinkedIn</a>
+              {data.personalInfo.github && (
+                <>
+                  {" • "}
+                  <a href={data.personalInfo.github} target="_blank" className="text-blue-600 hover:underline">Github</a>
+                </>
+              )}
               {data.personalInfo.website && (
                 <>
                   {" • "}

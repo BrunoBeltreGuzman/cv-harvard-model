@@ -25,6 +25,7 @@ const formSchema = z.object({
     phone: z.string().min(1, "El teléfono es requerido"),
     location: z.string().optional(),
     linkedin: z.string().url("URL de LinkedIn inválida").optional().or(z.literal("")),
+    github: z.string().url("URL de Github inválida").optional().or(z.literal("")),
     website: z.string().url("URL inválida").optional().or(z.literal("")),
   }),
   profile: z.string().min(1, "El perfil profesional es requerido"),
@@ -84,6 +85,7 @@ export function CVForm({ onSubmit, initialData }: { onSubmit: (data: CVData) => 
         phone: "",
         location: "",
         linkedin: "",
+        github: "",
         website: "",
       },
       profile: "",
@@ -214,6 +216,19 @@ export function CVForm({ onSubmit, initialData }: { onSubmit: (data: CVData) => 
                     <FormLabel>LinkedIn</FormLabel>
                     <FormControl>
                       <Input placeholder="https://linkedin.com/in/usuario" {...field} />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={form.control}
+                name="personalInfo.github"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Github (opcional)</FormLabel>
+                    <FormControl>
+                      <Input placeholder="https://github.com/usuario" {...field} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
