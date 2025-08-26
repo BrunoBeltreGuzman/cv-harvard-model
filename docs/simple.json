@@ -31,7 +31,7 @@
       "location": "Santo Domingo, Distrito Nacional, República Dominicana"
     },
     {
-      "company": "Assoc Developer",
+      "company": "TransUnion",
       "position": "Assoc Developer",
       "startDate": "2022-03",
       "endDate": "2025-03",
@@ -69,17 +69,14 @@
     },
     {
       "category": "Bases de Datos",
-      "items": ["PostgreSQL", "MySQL", "SQLite", "y no relacionales"]
+      "items": ["PostgreSQL", "MySQL", "SQLServer", "y no relacionales"]
     },
     {
       "category": "Herramientas",
       "items": [
         "Git",
-        "Github/Gitlab/Bitbucket",
         "Docker",
-        "Linux",
-        "VScode",
-        "Intellij Idea"
+        "Linux"
       ]
     }
   ],
