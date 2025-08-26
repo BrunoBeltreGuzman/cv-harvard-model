@@ -128,6 +128,7 @@ export function CVForm({ onSubmit, initialData }: { onSubmit: (data: CVData) => 
 
   function onFormSubmit(values: CVData) {
     onSubmit(values);
+    window.scrollTo(0, 0);
   }
 
   return (
