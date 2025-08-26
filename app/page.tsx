@@ -76,8 +76,6 @@ export default function Page() {
       // Limpiar
       document.body.removeChild(link);
       URL.revokeObjectURL(link.href);
-
-      console.log("Archivo JSON exportado con éxito");
     } catch (error) {
       console.error("Error exportando JSON:", error);
     }
@@ -90,6 +88,7 @@ export default function Page() {
         {view === "form" ? (
           <div>
             <div className="flex justify-center gap-4 print:hidden">
+              <Button variant="outline" onClick={() => window.location.reload()}>Limpiar datos</Button>
               <Button onClick={importJson}>Importar JSON</Button>
             </div>
             <CVForm onSubmit={handleSubmit} initialData={cvData || undefined} />
