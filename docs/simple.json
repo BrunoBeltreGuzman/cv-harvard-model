@@ -1,0 +1,130 @@
+{
+  "personalInfo": {
+    "name": "Bruno Beltre",
+    "title": "Desarrollador de Software",
+    "email": "brunobeltreguzman@gmail.com",
+    "phone": "+18094941462",
+    "location": "Santo Domingo, Distrito Nacional, República Dominicana",
+    "linkedin": "https://linkedin.com/in/brunobeltre",
+    "github": "https://github.com/BrunoBeltreGuzman",
+    "website": "https://brunobeltre.vercel.app"
+  },
+  "profile": "Soy un creativo apasionado impulsado por la automatización de la información y la tecnología. Tengo experiencia en el desarrollo de Software, con mis habilidades sé que puedo ayudar en el desarrollo, implementación, pruebas y documentacion de Software.",
+  "education": [
+    {
+      "institution": "Universidad Dominicana O&M",
+      "degree": "Ingeniería de Sistemas y Computación",
+      "startDate": "2018-01",
+      "endDate": "2022-12",
+      "location": "Santo Domingo, Distrito Nacional, República Dominicana",
+      "description": "Formación en desarrollo de software, bases de datos y arquitecturas distribuidas."
+    }
+  ],
+  "experience": [
+    {
+      "company": "TransUnion",
+      "position": "Software Developer",
+      "startDate": "2025-03",
+      "endDate": "",
+      "isCurrent": true,
+      "description": "• Desarrollé aplicaciones y servicios REST utilizando Spring Boot.\n• Implementé procesamiento batch con Spring Batch para grandes volúmenes de datos.\n• Integré servicios con AWS (S3, Lambda, entre otros).\n• Trabajé en microservicios con arquitectura distribuida usando Eureka, Kafka y PostgreSQL.\n• Automatización de CI/CD con Jenkins y control de versiones en Git/Bitbucket.\n• Trabajo en equipo bajo metodología ágil (Scrum) y enfoque DevOps.\n• Aprendí sobre computación en la nube y me certifiqué en AWS Certified Cloud Practitioner.",
+      "location": "Santo Domingo, Distrito Nacional, República Dominicana"
+    },
+    {
+      "company": "Assoc Developer",
+      "position": "Assoc Developer",
+      "startDate": "2022-03",
+      "endDate": "2025-03",
+      "isCurrent": false,
+      "description": "• Desarrollé requerimientos para bancos nacionales utilizando Cache, ObjectScript.\n• Implementé servicios web (SOAP/REST) usando JavaEE.\n• Gestioné pases entre ambientes de desarrollo, QA y producción.\n• Aprendí y apliqué políticas de protección de datos y manejo seguro de información.\n• Me certifiqué en OWASP Top 10, fortaleciendo conocimientos en desarrollo seguro.",
+      "location": "Santo Domingo, Distrito Nacional, República Dominicana"
+    },
+    {
+      "company": "Ofimatic",
+      "position": "Web Developer",
+      "startDate": "2021-01",
+      "endDate": "2022-03",
+      "isCurrent": false,
+      "description": "• Desarrollé aplicaciones web como Full Stack Developer, participando en análisis, diseño y desarrollo.\n• Usé React, Svelte, PHP y Golang en proyectos como chatbots y sistemas de gestión de contactos.\n• Integré APIs, optimicé rendimiento y aseguré una buena experiencia de usuario (UX).\n• Apliqué metodologías ágiles y control de versiones con Git/GitLab.",
+      "location": "Santo Domingo, Distrito Nacional, República Dominicana"
+    },
+    {
+      "company": "Universidad Dominicana O&M",
+      "position": "Soporte Técnico",
+      "startDate": "2019-01",
+      "endDate": "2019-12",
+      "isCurrent": false,
+      "description": "• Brindé soporte técnico a estudiantes y personal docente en los Centros Educacionales de Cómputo (CEC).\n• Realicé mantenimiento preventivo y correctivo de equipos informáticos (hardware y software).\n• Instalé y actualicé sistemas operativos, aplicaciones educativas y herramientas administrativas.\n• Asistí en la configuración de redes locales y resolución de problemas de conectividad.",
+      "location": "Santo Domingo, Distrito Nacional, República Dominicana"
+    }
+  ],
+  "skills": [
+    {
+      "category": "Lenguajes de Programación",
+      "items": ["Java", "Python", "JavaScript", "TypeScript"]
+    },
+    {
+      "category": "Frameworks",
+      "items": ["Spring Boot", "React", "React Native", "Node.js"]
+    },
+    {
+      "category": "Bases de Datos",
+      "items": ["PostgreSQL", "MySQL", "SQLite", "y no relacionales"]
+    },
+    {
+      "category": "Herramientas",
+      "items": [
+        "Git",
+        "Github/Gitlab/Bitbucket",
+        "Docker",
+        "Linux",
+        "VScode",
+        "Intellij Idea"
+      ]
+    }
+  ],
+  "languages": [
+    {
+      "language": "Español",
+      "level": "Nativo"
+    },
+    {
+      "language": "Inglés",
+      "level": "Intermedio (B2)"
+    }
+  ],
+  "complementary": [
+    {
+      "title": "AWS Certified Cloud Practitioner (2022)",
+      "institution": "AWS",
+      "startDate": "2022-1",
+      "endDate": "2022-12",
+      "isCurrent": false,
+      "type": "Certificación"
+    },
+    {
+      "title": "Diseño de Pagina Web",
+      "institution": "INFOTEP",
+      "startDate": "2020-01",
+      "endDate": "2020-12",
+      "isCurrent": false,
+      "type": "Curso Online"
+    },
+    {
+      "title": "Administración de Base De Datos",
+      "institution": "ITLA",
+      "startDate": "2020-01",
+      "endDate": "2020-12",
+      "isCurrent": false,
+      "type": "Curso Online"
+    },
+    {
+      "title": "Curso Avanzado de Java",
+      "institution": "Platzi",
+      "startDate": "2021-01",
+      "endDate": "2021-12",
+      "isCurrent": false,
+      "type": "Curso Online"
+    }
+  ]
+}
