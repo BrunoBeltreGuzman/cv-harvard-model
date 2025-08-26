@@ -60,8 +60,8 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 
 ## Gallery
 
-![CV Preview 1](./doc/1.png)
-![CV Preview 1](./doc/2.png)
-![CV Preview 1](./doc/3.png)
-![CV Preview 1](./doc/4.png)
-![CV Preview 1](./doc/5.png)
+![CV Preview 1](./docs/1.png)
+![CV Preview 1](./docs/2.png)
+![CV Preview 1](./docs/3.png)
+![CV Preview 1](./docs/4.png)
+![CV Preview 1](./docs/5.png)
