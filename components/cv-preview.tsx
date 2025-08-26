@@ -45,6 +45,18 @@ export function CVPreview({ data }: { data: CVData }) {
                   <a href={data.personalInfo.website} target="_blank" className="text-blue-600 hover:underline">Sitio Web</a>
                 </>
               )}
+              {data.personalInfo.phone && (
+                <>
+                  {" • "}
+                  <a href={"https://api.whatsapp.com/send?phone=" + data.personalInfo.phone} target="_blank" className="text-blue-600 hover:underline">WhatsApp</a>
+                </>
+              )}
+              {data.personalInfo.email && (
+                <>
+                  {" • "}
+                  <a href={"mailto:" + data.personalInfo.email} target="_blank" className="text-blue-600 hover:underline">Enviar Correo</a>
+                </>
+              )}
             </p>
           </section>
 

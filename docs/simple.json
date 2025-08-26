@@ -1,9 +1,9 @@
 {
   "personalInfo": {
-    "name": "Bruno Beltre",
+    "name": "Bruno Beltre Guzman",
     "title": "Desarrollador de Software",
     "email": "brunobeltreguzman@gmail.com",
-    "phone": "+18094941462",
+    "phone": "18094941462",
     "location": "Santo Domingo, Distrito Nacional, República Dominicana",
     "linkedin": "https://linkedin.com/in/brunobeltre",
     "github": "https://github.com/BrunoBeltreGuzman",
@@ -17,7 +17,7 @@
       "startDate": "2018-01",
       "endDate": "2022-12",
       "location": "Santo Domingo, Distrito Nacional, República Dominicana",
-      "description": "Formación en desarrollo de software, bases de datos y arquitecturas distribuidas."
+      "description": "Formación integral en Ingeniería de Sistemas y Computación, con un enfoque en desarrollo de software, gestión de bases de datos y arquitecturas distribuidas. Adquirí conocimientos sólidos en la resolución de problemas complejos, diseño de sistemas eficientes y aplicación de metodologías ágiles."
     }
   ],
   "experience": [
@@ -27,7 +27,7 @@
       "startDate": "2025-03",
       "endDate": "",
       "isCurrent": true,
-      "description": "• Desarrollé aplicaciones y servicios REST utilizando Spring Boot.\n• Implementé procesamiento batch con Spring Batch para grandes volúmenes de datos.\n• Integré servicios con AWS (S3, Lambda, entre otros).\n• Trabajé en microservicios con arquitectura distribuida usando Eureka, Kafka y PostgreSQL.\n• Automatización de CI/CD con Jenkins y control de versiones en Git/Bitbucket.\n• Trabajo en equipo bajo metodología ágil (Scrum) y enfoque DevOps.\n• Aprendí sobre computación en la nube y me certifiqué en AWS Certified Cloud Practitioner.",
+      "description": "Desarrollé aplicaciones y servicios REST utilizando Spring Boot.\nImplementé procesamiento batch con Spring Batch para grandes volúmenes de datos.\nIntegré servicios con AWS (S3, Lambda, entre otros).\nTrabajé en microservicios con arquitectura distribuida usando Eureka, Kafka y PostgreSQL.\nAutomatización de CI/CD con Jenkins y control de versiones en Git/Bitbucket.\nTrabajo en equipo bajo metodología ágil (Scrum) y enfoque DevOps.\nAprendí sobre computación en la nube y me certifiqué en AWS Certified Cloud Practitioner.",
       "location": "Santo Domingo, Distrito Nacional, República Dominicana"
     },
     {
@@ -36,7 +36,7 @@
       "startDate": "2022-03",
       "endDate": "2025-03",
       "isCurrent": false,
-      "description": "• Desarrollé requerimientos para bancos nacionales utilizando Cache, ObjectScript.\n• Implementé servicios web (SOAP/REST) usando JavaEE.\n• Gestioné pases entre ambientes de desarrollo, QA y producción.\n• Aprendí y apliqué políticas de protección de datos y manejo seguro de información.\n• Me certifiqué en OWASP Top 10, fortaleciendo conocimientos en desarrollo seguro.",
+      "description": "Desarrollé requerimientos para bancos nacionales utilizando Cache, ObjectScript.\nImplementé servicios web (SOAP/REST) usando JavaEE.\nGestioné pases entre ambientes de desarrollo, QA y producción.\nAprendí y apliqué políticas de protección de datos y manejo seguro de información.\nMe certifiqué en OWASP Top 10, fortaleciendo conocimientos en desarrollo seguro.",
       "location": "Santo Domingo, Distrito Nacional, República Dominicana"
     },
     {
@@ -45,7 +45,7 @@
       "startDate": "2021-01",
       "endDate": "2022-03",
       "isCurrent": false,
-      "description": "• Desarrollé aplicaciones web como Full Stack Developer, participando en análisis, diseño y desarrollo.\n• Usé React, Svelte, PHP y Golang en proyectos como chatbots y sistemas de gestión de contactos.\n• Integré APIs, optimicé rendimiento y aseguré una buena experiencia de usuario (UX).\n• Apliqué metodologías ágiles y control de versiones con Git/GitLab.",
+      "description": "Desarrollé aplicaciones web como Full Stack Developer, participando en análisis, diseño y desarrollo.\nUsé React, Svelte, PHP y Golang en proyectos como chatbots y sistemas de gestión de contactos.\nIntegré APIs, optimicé rendimiento y aseguré una buena experiencia de usuario (UX).\nApliqué metodologías ágiles y control de versiones con Git/GitLab.",
       "location": "Santo Domingo, Distrito Nacional, República Dominicana"
     },
     {
@@ -54,18 +54,18 @@
       "startDate": "2019-01",
       "endDate": "2019-12",
       "isCurrent": false,
-      "description": "• Brindé soporte técnico a estudiantes y personal docente en los Centros Educacionales de Cómputo (CEC).\n• Realicé mantenimiento preventivo y correctivo de equipos informáticos (hardware y software).\n• Instalé y actualicé sistemas operativos, aplicaciones educativas y herramientas administrativas.\n• Asistí en la configuración de redes locales y resolución de problemas de conectividad.",
+      "description": "Brindé soporte técnico a estudiantes y personal docente en los Centros Educacionales de Cómputo (CEC).\nRealicé mantenimiento preventivo y correctivo de equipos informáticos (hardware y software).\nInstalé y actualicé sistemas operativos, aplicaciones educativas y herramientas administrativas.\nAsistí en la configuración de redes locales y resolución de problemas de conectividad.",
       "location": "Santo Domingo, Distrito Nacional, República Dominicana"
     }
   ],
   "skills": [
     {
       "category": "Lenguajes de Programación",
-      "items": ["Java", "Python", "JavaScript", "TypeScript"]
+      "items": ["Java", "PHP", "Go", "JavaScript", "TypeScript"]
     },
     {
       "category": "Frameworks",
-      "items": ["Spring Boot", "React", "React Native", "Node.js"]
+      "items": ["Spring Boot", "Laravel", "Node.js", "React", "React Native"]
     },
     {
       "category": "Bases de Datos",
@@ -73,11 +73,7 @@
     },
     {
       "category": "Herramientas",
-      "items": [
-        "Git",
-        "Docker",
-        "Linux"
-      ]
+      "items": ["Git", "Docker", "Linux", "Jira", "Jenkins"]
     }
   ],
   "languages": [

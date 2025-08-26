@@ -254,6 +254,22 @@ export function CVDocument({ data }: { data: CVData }) {
                 </Link>
               </>
             )}
+            {data.personalInfo.phone && (
+              <>
+                <Text style={styles.linkSeparator}> • </Text>
+                <Link src={"https://api.whatsapp.com/send?phone=" + data.personalInfo.phone}>
+                  <Text style={styles.linkText}>WhatsApp</Text>
+                </Link>
+              </>
+            )}
+            {data.personalInfo.email && (
+              <>
+                <Text style={styles.linkSeparator}> • </Text>
+                <Link src={"mailto:" + data.personalInfo.email}>
+                  <Text style={styles.linkText}>Enviar Correo</Text>
+                </Link>
+              </>
+            )}
           </View>
         </View>
 

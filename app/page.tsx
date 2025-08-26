@@ -47,7 +47,6 @@ export default function Page() {
       // Guardar en tu estado
       setCvData(data);
       setView("preview");
-      alert("CV importado correctamente");
     } catch (err) {
       console.error("Error al importar JSON:", err);
       alert("No se pudo importar el archivo");
