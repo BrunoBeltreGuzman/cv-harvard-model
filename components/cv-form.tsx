@@ -134,7 +134,7 @@ export function CVForm({ onSubmit, initialData }: { onSubmit: (data: CVData) => 
     <>
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onFormSubmit)} className="space-y-8">
-          <div className="space-y-4">
+          <div className="space-y-4 border-b-2 border-gray-300 pb-6">
             <h2 className="text-2xl font-bold">Información Personal</h2>
             <div className="grid grid-cols-2 gap-4">
               <FormField
@@ -205,7 +205,7 @@ export function CVForm({ onSubmit, initialData }: { onSubmit: (data: CVData) => 
             </div>
           </div>
 
-          <div className="space-y-4">
+          <div className="space-y-4 border-b-2 border-gray-300 pb-6">
             <h2 className="text-2xl font-bold">Links</h2>
             <div className="grid grid-cols-2 gap-4">
               <FormField
@@ -250,7 +250,7 @@ export function CVForm({ onSubmit, initialData }: { onSubmit: (data: CVData) => 
             </div>
           </div>
 
-          <div className="space-y-4">
+          <div className="space-y-4 border-b-2 border-gray-300 pb-6">
             <h2 className="text-2xl font-bold">Perfil Profesional</h2>
             <FormField
               control={form.control}
@@ -270,7 +270,7 @@ export function CVForm({ onSubmit, initialData }: { onSubmit: (data: CVData) => 
             />
           </div>
 
-          <div className="space-y-4">
+          <div className="space-y-4 border-b-2 border-gray-300 pb-6">
             <div className="flex items-center justify-between">
               <h2 className="text-2xl font-bold">Experiencia Laboral</h2>
               <Button
@@ -437,7 +437,7 @@ export function CVForm({ onSubmit, initialData }: { onSubmit: (data: CVData) => 
             ))}
           </div>
 
-          <div className="space-y-4">
+          <div className="space-y-4 border-b-2 border-gray-300 pb-6">
             <div className="flex items-center justify-between">
               <h2 className="text-2xl font-bold">Formación</h2>
               <Button
@@ -580,7 +580,7 @@ export function CVForm({ onSubmit, initialData }: { onSubmit: (data: CVData) => 
             ))}
           </div>
 
-          <div className="space-y-4">
+          <div className="space-y-4 border-b-2 border-gray-300 pb-6">
             <div className="flex items-center justify-between">
               <h2 className="text-2xl font-bold">Competencias</h2>
               <Button
@@ -665,7 +665,7 @@ export function CVForm({ onSubmit, initialData }: { onSubmit: (data: CVData) => 
             ))}
           </div>
 
-          <div className="space-y-4">
+          <div className="space-y-4 border-b-2 border-gray-300 pb-6">
             <div className="flex items-center justify-between">
               <h2 className="text-2xl font-bold">Complementarios</h2>
               <Button
@@ -812,7 +812,7 @@ export function CVForm({ onSubmit, initialData }: { onSubmit: (data: CVData) => 
             ))}
           </div>
 
-          <div className="space-y-4">
+          <div className="space-y-4 border-b-2 border-gray-300 pb-6">
             <div className="flex items-center justify-between">
               <h2 className="text-2xl font-bold">Idiomas</h2>
               <Button
@@ -887,7 +887,7 @@ export function CVForm({ onSubmit, initialData }: { onSubmit: (data: CVData) => 
             ))}
           </div>
 
-          <div className="space-y-4">
+          <div className="space-y-4 border-b-2 border-gray-300 pb-6">
             <Button 
               type="submit" 
               className="w-full"
