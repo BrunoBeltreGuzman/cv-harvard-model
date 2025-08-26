@@ -47,16 +47,16 @@ export default function Page() {
       // Guardar en tu estado
       setCvData(data);
       setView("preview");
-
-      alert("✅ CV importado correctamente");
+      alert("CV importado correctamente");
     } catch (err) {
       console.error("Error al importar JSON:", err);
-      alert("❌ No se pudo importar el archivo");
+      alert("No se pudo importar el archivo");
     }
   }
 
   async function exportJson() {
-    const filename = "data.json";
+    const ramdomuuid = crypto.randomUUID();
+    const filename = `${cvData?.personalInfo.name}, ${cvData?.personalInfo.title} ${ramdomuuid}.json`;
     try {
       // Convertir el objeto a JSON
       const jsonString = JSON.stringify(cvData, null, 2); // null, 2 para que sea legible
@@ -86,12 +86,11 @@ export default function Page() {
   return (
     <div className="min-h-screen bg-gray-100 py-8">
       <div className="container mx-auto px-4">
-        <h1 className="text-3xl font-bold text-center mb-8">Generador de CV Harvard</h1>
-        
+        <h1 className="text-3xl font-bold text-center mb-8 cursor-pointer" onClick={() => setView("form")}>Generador de CV Harvard</h1>
         {view === "form" ? (
           <div>
             <div className="flex justify-center gap-4 print:hidden">
-              <Button onClick={importJson}>Importar Json</Button>
+              <Button onClick={importJson}>Importar JSON</Button>
             </div>
             <CVForm onSubmit={handleSubmit} initialData={cvData || undefined} />
           </div>
@@ -99,7 +98,7 @@ export default function Page() {
           <div className="space-y-4">
             <div className="flex justify-end gap-4 print:hidden">
               <Button variant="outline" onClick={exportJson}>
-                Exportar Json
+                Exportar JSON
               </Button>
               <Button variant="outline" onClick={() => setView("form")}>
                 Editar
