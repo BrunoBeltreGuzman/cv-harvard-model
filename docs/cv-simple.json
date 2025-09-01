@@ -9,13 +9,13 @@
     "github": "https://github.com/BrunoBeltreGuzman",
     "website": "https://brunobeltre.vercel.app"
   },
-  "profile": "Soy un creativo apasionado impulsado por la automatización de la información y la tecnología. Tengo experiencia en el desarrollo de Software, con mis habilidades sé que puedo ayudar en el desarrollo, implementación, pruebas y documentacion de Software.",
+  "profile": "Soy un Desarrollador de Software con más de 5 años de experiencia en el diseño, desarrollo e implementación de soluciones tecnológicas de alto impacto. Me enfoco en desarrollar sistemas eficientes, seguros y escalables, aplicando buenas prácticas de programación, patrones de diseño y metodologías para asegurar un alto rendimiento y calidad en los entregables. Tengo experiencia en todo el ciclo de vida del software: análisis, desarrollo, pruebas, despliegue y mantenimiento, colaborando en equipos multidisciplinarios. Entre mis fortalezas destaco la capacidad de resolver problemas complejos, optimizar procesos y mantener la seguridad de la información. Además, cuento con habilidades blandas como comunicación efectiva, trabajo en equipo, adaptabilidad y orientación a resultados, lo que me permite integrarme y aportar valor en entornos dinámicos y de constante evolución. Estoy comprometido con la mejora continua y la innovación, buscando siempre aportar soluciones que generen impacto positivo en los proyectos y servicios.",
   "education": [
     {
       "institution": "Universidad Dominicana O&M",
       "degree": "Ingeniería de Sistemas y Computación",
-      "startDate": "2018-01",
-      "endDate": "2022-12",
+      "startDate": "2018-09",
+      "endDate": "2023-12",
       "location": "Santo Domingo, Distrito Nacional, República Dominicana",
       "description": "Formación integral en Ingeniería de Sistemas y Computación, con un enfoque en desarrollo de software, gestión de bases de datos y arquitecturas distribuidas. Adquirí conocimientos sólidos en la resolución de problemas complejos, diseño de sistemas eficientes y aplicación de metodologías ágiles."
     }
@@ -98,7 +98,7 @@
     {
       "title": "Diseño de Pagina Web",
       "institution": "INFOTEP",
-      "startDate": "2020-01",
+      "startDate": "2020-08",
       "endDate": "2020-12",
       "isCurrent": false,
       "type": "Curso Online"
@@ -107,15 +107,15 @@
       "title": "Administración de Base De Datos",
       "institution": "ITLA",
       "startDate": "2020-01",
-      "endDate": "2020-12",
+      "endDate": "2020-3",
       "isCurrent": false,
       "type": "Curso Online"
     },
     {
       "title": "Curso Avanzado de Java",
       "institution": "Platzi",
-      "startDate": "2021-01",
-      "endDate": "2021-12",
+      "startDate": "2021-04",
+      "endDate": "2021-05",
       "isCurrent": false,
       "type": "Curso Online"
     }

@@ -176,10 +176,12 @@ const styles = StyleSheet.create({
   skillsGrid: {
     flexDirection: 'row',
     flexWrap: 'wrap',
+    justifyContent: 'flex-start',
   },
   skillRow: {
-    flexDirection: 'column',
-    marginRight: 10,
+    width: '50%',
+    marginBottom: 8,
+    paddingRight: 8,
   },
   skillName: {
     fontSize: 10,
