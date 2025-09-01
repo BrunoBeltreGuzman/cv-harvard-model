@@ -55,7 +55,7 @@ export default function Page() {
 
   async function exportJson() {
     const ramdomuuid = crypto.randomUUID();
-    const filename = `${cvData?.personalInfo.name}, ${cvData?.personalInfo.title} ${ramdomuuid}.json`;
+    const filename = `${cvData?.personalInfo.name} ${cvData?.personalInfo.title} ${ramdomuuid}.json`;
     try {
       // Convertir el objeto a JSON
       const jsonString = JSON.stringify(cvData, null, 2); // null, 2 para que sea legible
